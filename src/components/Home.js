@@ -73,7 +73,7 @@ const Home = () => {
         </h1>
 
         {/* Swiper container for pet cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-6">
           {filteredPets.map((pet) => (
             <PetCard key={pet.id} pet={pet} />
           ))}
