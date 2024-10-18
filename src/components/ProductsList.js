@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const ProductsList = () => {
   const [products, setProducts] = useState([]);
@@ -27,6 +28,7 @@ const ProductsList = () => {
 
   return (
     <div className="container mx-auto mt-10">
+      <Navbar/>
       <h1 className="text-3xl font-bold mb-6">Our Products</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

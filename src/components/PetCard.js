@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from './Navbar';
 
 function Card() {
   const [pets, setPets] = useState([]);
