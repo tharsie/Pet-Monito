@@ -3,6 +3,7 @@ import PetCard from './PetCard';
 import Navbar from './Navbar';  // Import the Navbar
 import { Link } from 'react-router-dom'; 
 import backgroundImage from '../assets/images/home-background.png';  // Import background image
+import betweenImage from '../assets/images/between-image.png';
 
 const Home = () => {
   const [pets, setPets] = useState([]);
@@ -73,9 +74,6 @@ const Home = () => {
       <div className="container mx-auto mt-10">
         {/* Content */}
         <div className="flex flex-col items-center justify-center space-y-6">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-            Available Pets
-          </h1>
 
           {/* Pet Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-6">
@@ -83,7 +81,10 @@ const Home = () => {
               <PetCard key={pet.id} pet={pet} />
             ))}
           </div>
+  {/* Image between Available Pets and Our Products */}
+  <img src={betweenImage} alt="Promotional Banner" className="my-10 w-full h-auto object-cover rounded-lg shadow-lg" /> {/* This image will be displayed between sections */}
 
+         
           {/* Products Section */}
           <h1 className="text-3xl font-bold mb-6">Our Products</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
