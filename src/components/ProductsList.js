@@ -11,15 +11,18 @@ const ProductsList = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch('https://monitor-backend-rust.vercel.app/api/products');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
         const data = await response.json();
         setProducts(data);
+         // Initialize filteredPets with the full pets list
       } catch (error) {
         setError(error.message);
       } finally {
         setLoading(false);
       }
     };
-
     fetchProducts();
   }, []);
 

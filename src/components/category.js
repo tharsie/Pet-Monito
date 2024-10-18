@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
@@ -33,6 +34,7 @@ const Category = () => {
 
   return (
     <div className="container mx-auto mt-10">
+      <Navbar/>
       <h1 className="text-3xl font-bold text-center mb-8">Pet Categories</h1>
 
       {/* Grid Layout for Categories */}

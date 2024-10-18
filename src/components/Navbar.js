@@ -9,10 +9,6 @@ const Navbar = ({ onSearch }) => {
         {/* Logo */}
         <h1 className="text-blue-500 text-2xl font-bold">Monito Pet Store</h1>
         
-        {/* Search Bar */}
-        <div className="w-1/3">
-          <SearchBar onSearch={onSearch} />  {/* Pass the onSearch prop */}
-        </div>
 
         {/* Links */}
         <ul className="flex space-x-6">
@@ -25,6 +21,7 @@ const Navbar = ({ onSearch }) => {
           <li className="text-blue-500 text-l font-bold">
             <Link to="/products">Products</Link>
           </li>
+          <li> <SearchBar onSearch={onSearch} /></li>
           <li><button>join the community</button></li>
         </ul>
       </div>

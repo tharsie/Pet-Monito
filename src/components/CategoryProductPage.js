@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const CategoryProductPage = () => {
   const { id } = useParams();  // Get category ID from URL
@@ -31,6 +32,7 @@ const CategoryProductPage = () => {
 
   return (
     <div className="container mx-auto mt-10">
+      
       <h1 className="text-3xl font-bold mb-6">Products in this Category</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
